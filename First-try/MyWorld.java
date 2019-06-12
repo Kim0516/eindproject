@@ -8,14 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    private int timer = 1000;
     /**
      * Constructor for objects of class MyWorld.
      * 
      */
     public MyWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with a cell size of 1x1 pixels.
         super(720, 720, 1);
         addObject(new Hero(),360, 610);
         update();
@@ -28,8 +28,14 @@ public class MyWorld extends World
     {
         baseX = (baseX + bgiWidth - 1) % bgiWidth;
         update();
+
+        timer--;
+        showText(""+timer, 700, 10);
+        if (timer <= 0) {
+            Greenfoot.stop();
+        }
     }
-     
+
     private void update()
     {
         if (baseX != 0) getBackground().drawImage(bgi, baseX - bgiWidth, 0);

@@ -18,9 +18,10 @@ public class Hero extends Actor
     {
         int groundLevel = getWorld().getHeight() - getImage().getHeight()/2-90;
         boolean onGround = (getY() == groundLevel);
-        if(Greenfoot.isKeyDown("w") && onGround == true || Greenfoot.isKeyDown("Up") && onGround == true || Greenfoot.isKeyDown("Space") && onGround == true)
+
+        if(Greenfoot.isKeyDown("w") && onGround == true || Greenfoot.isKeyDown("Up") && onGround == true)
         {
-            gravity = 13;
+            gravity = 10;
         }
         if(getY() < 610)
         {
@@ -30,18 +31,9 @@ public class Hero extends Actor
         {
             gravity=1;
         }
-        if(getX() > 720)
-        {
-            setLocation(getX()-1, getY());
-        }
-        if(getX() < 5)
-        {
-            setLocation(getX()+3, getY());
-        }
         Moving();
         move(-1);
         setLocation(getX(), getY() - gravity);
-        Platforms();
     }    
 
     /**
@@ -58,32 +50,4 @@ public class Hero extends Actor
             move(-2);
         }
     }
-
-    /**
-     * Allows player to jump on the platforms
-     */
-    public void Platforms()
-    {
-        if(isTouching(Platform.class) && getY() < 465)
-        {
-            gravity--;
-        }
-        if(isTouching(Platform.class) && getY() > 470)
-        {
-            gravity = 1;
-        }
-        if(isTouching(Platform.class) && getY() > 650)
-        {
-            gravity--;
-        }
-        if(isTouching(Platform.class) && getY() < 655)
-        {
-            gravity = 1;
-        }
-        if(Greenfoot.isKeyDown("w") && isTouching(Platform.class) || Greenfoot.isKeyDown("Up") && isTouching(Platform.class) || Greenfoot.isKeyDown("Space") && isTouching(Platform.class))
-        {
-            gravity = 25;
-        }
-    }
-
 }

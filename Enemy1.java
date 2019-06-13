@@ -8,10 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemy1 extends Enemy
 {
-    private int health = 0;
     public Enemy1()
     {
+        super(2);
         setRotation(0);
+        
     }
     /**
      * Act - do whatever the Enemy1 wants to do. This method is called whenever
@@ -27,6 +28,13 @@ public class Enemy1 extends Enemy
         }  
         checkHealth();
     }  
+    public void checkHealth()
+    {
+        if (health <= 1)
+        {
+            getWorld().removeObject(this);
+    }
+}
                      public boolean atWorldEdge()
              
     {  

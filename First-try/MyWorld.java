@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-    private int timer = 1000;
+    private int timer = 10000;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -16,7 +16,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with a cell size of 1x1 pixels.
-        super(720, 720, 1);
+        super(720, 720, 1, false);
         addObject(new Hero(),360, 610);
         update();
     }
@@ -30,7 +30,7 @@ public class MyWorld extends World
         update();
 
         timer--;
-        showText(""+timer, 700, 10);
+        showText(""+timer, 720, 10);
         if (timer <= 0) {
             Greenfoot.stop();
         }

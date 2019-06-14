@@ -21,7 +21,7 @@ public class Enemy extends Actor
     public void act() 
     {
         
-    }   
+    } 
     public void loseHealth()
     {
      health--;   
@@ -33,6 +33,19 @@ public class Enemy extends Actor
     public void Health()
     {
      loseHealth();
+    }
+    public void ifOnTop()
+    {
+        Actor Hero = getOneIntersectingObject(Hero.class);
+        
+        if (getOneObjectAtOffset(-19, -45, Hero.class) != null || getOneObjectAtOffset(19, -45, Hero.class) != null) 
+       {  
+           getWorld().removeObject(this);  
+       } 
+       else if(getOneObjectAtOffset(-19, 10, Hero.class) != null || getOneObjectAtOffset(19, 10, Hero.class) != null )
+       {  
+            Hero.die();
+       }
     }
 }
 

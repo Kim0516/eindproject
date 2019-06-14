@@ -20,7 +20,7 @@ public class Hero extends Actor
         boolean onGround = (getY() == groundLevel);
         if(Greenfoot.isKeyDown("w") && onGround == true || Greenfoot.isKeyDown("Up") && onGround == true || Greenfoot.isKeyDown("Space") && onGround == true)
         {
-            gravity = 13;
+            gravity = 25;
         }
         if(getY() < 610)
         {
@@ -37,6 +37,11 @@ public class Hero extends Actor
         if(getX() < 5)
         {
             setLocation(getX()+3, getY());
+        }
+        if(isTouching(Enemy.class))
+        {
+            getWorld().removeObject(this); 
+            Greenfoot.stop();
         }
         Moving();
         move(-1);

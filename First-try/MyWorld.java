@@ -18,6 +18,7 @@ public class MyWorld extends World
         // Create a new world with a cell size of 1x1 pixels.
         super(720, 720, 1, false);
         addObject(new Hero(),360, 610);
+        //adding platforms
         addObject(new Platform(),500,550);
         addObject(new Platform(),720,500);
         addObject(new Platform(),950,260);
@@ -30,6 +31,36 @@ public class MyWorld extends World
         addObject(new Platform(),2503,316);
         addObject(new Platform(),2903,556);
         addObject(new Platform(),3103,373);
+        //adding enimies
+        addObject(new Enemy1(),650,610);
+        addObject(new Enemy1(),923,610);
+        addObject(new Enemy1(),950,260);
+        addObject(new Enemy1(),1200,400);
+        addObject(new Enemy1(),1350,610);
+        addObject(new Enemy1(),1400,610);
+        addObject(new Enemy1(),6340,610);
+        addObject(new Enemy1(),4542,610);
+        addObject(new Enemy1(),3764,610);
+        addObject(new Enemy1(),3241,610);
+        addObject(new Enemy1(),5562,610);
+        addObject(new Enemy1(),5857,610);
+        addObject(new Enemy1(),1600,234);
+        addObject(new Enemy1(),6693,365);
+        addObject(new Enemy1(),2863,436);
+        addObject(new Enemy1(),2595,578);
+        addObject(new Enemy1(),7595,232);
+        addObject(new Enemy1(),3201,610);
+        addObject(new Enemy1(),2135,430);
+        addObject(new Enemy1(),3502,610);
+        addObject(new Enemy1(),2640,610);
+        addObject(new Enemy1(),7895,212);
+        addObject(new Enemy1(),7895,610);
+        addObject(new Enemy1(),4895,412);
+        addObject(new Enemy1(),3995,326);
+        addObject(new Enemy1(),5313,402);
+        addObject(new Enemy1(),8523,439);
+        addObject(new Enemy1(),9106,610);
+        addObject(new Enemy1(),9350,269);
         update();
     }
     int baseX = 0;
@@ -44,21 +75,6 @@ public class MyWorld extends World
         update();
 
         timer--;
-        if(timer > 1000)
-        {
-            showText(""+timer, 720, 10);
-        } else
-        {
-            showText("",720,10);
-        }
-        if(timer < 1000)
-        {
-            showText(""+timer, 725, 10);
-        }
-        if(timer < 100)
-        {
-            showText("1", 725, 10);
-        }
         if (timer <= 0) {
             Greenfoot.stop();
         }

@@ -1,36 +1,35 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class level2 here.
+ * Write a description of class level1 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class level2 extends World
+public class level1 extends World
 {
-
     /**
-     * Constructor for objects of class level2.
+     * Constructor for objects of class level1.
      * 
      */
-    public level2()
+    public level1()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(720, 720, 1, false);
         addObject(new Hero(),360, 610);
         //adding platforms
-        addObject(new Platform1(),500,550);
-        addObject(new Platform1(),720,500);
-        addObject(new Platform1(),950,260);
-        addObject(new Platform1(),1200,400);
-        addObject(new Platform1(),1400,234);
-        addObject(new Platform1(),1300,550);
-        addObject(new Platform1(),1540,470);
-        addObject(new Platform1(),2134,552);
-        addObject(new Platform1(),2268,316);
-        addObject(new Platform1(),2503,316);
-        addObject(new Platform1(),2903,556);
-        addObject(new Platform1(),3103,373);
+        addObject(new Platform(),500,550);
+        addObject(new Platform(),720,500);
+        addObject(new Platform(),950,260);
+        addObject(new Platform(),1200,400);
+        addObject(new Platform(),1400,234);
+        addObject(new Platform(),1300,550);
+        addObject(new Platform(),1540,470);
+        addObject(new Platform(),2134,552);
+        addObject(new Platform(),2268,316);
+        addObject(new Platform(),2503,316);
+        addObject(new Platform(),2903,556);
+        addObject(new Platform(),3103,373);
         //adding enimies
         addObject(new Enemy1(),650,610);
         addObject(new Enemy1(),923,610);
@@ -61,13 +60,13 @@ public class level2 extends World
         addObject(new Enemy1(),8523,439);
         addObject(new Enemy1(),9106,610);
         addObject(new Enemy1(),9350,269);
-        addObject(new worldSwitch(),3503,610);
+        addObject(new worldSwitch(),3803,610);
         update();
     }
     //add all the code below to level2 to add the background to level 2
     int baseX = 0;
     // 'bgi' stands for BackGroundImage
-    GreenfootImage bgi = new GreenfootImage("bg-level2.png"); 
+    GreenfootImage bgi = new GreenfootImage("Flat Night 2 BG.png"); 
     int bgiWidth = bgi.getWidth();
 
     public int WorldWidth = 0;

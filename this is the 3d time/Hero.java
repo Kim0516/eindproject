@@ -45,7 +45,7 @@ public class Hero extends Actor
             getWorld().removeObject(this); 
             Greenfoot.stop();
         }
-        if(isTouching(worldSwitch.class))
+        if(Greenfoot.isKeyDown("k"))
         {
             Greenfoot.setWorld(new level2());
         }
@@ -92,7 +92,27 @@ public class Hero extends Actor
         {
             gravity = 1;
         }
-        if(Greenfoot.isKeyDown("w") && isTouching(Platform.class) || Greenfoot.isKeyDown("Up") && isTouching(Platform.class) || Greenfoot.isKeyDown("Space") && isTouching(Platform.class))
+        if(Greenfoot.isKeyDown("w") && isTouching(Platform1.class) || Greenfoot.isKeyDown("Up") && isTouching(Platform.class) || Greenfoot.isKeyDown("Space") && isTouching(Platform.class))
+        {
+            gravity = 25;
+        }
+        if(isTouching(Platform1.class) && getY() < 465)
+        {
+            gravity--;
+        }
+        if(isTouching(Platform1.class) && getY() > 470)
+        {
+            gravity = 1;
+        }
+        if(isTouching(Platform1.class) && getY() > 650)
+        {
+            gravity--;
+        }
+        if(isTouching(Platform1.class) && getY() < 655)
+        {
+            gravity = 1;
+        }
+        if(Greenfoot.isKeyDown("w") && isTouching(Platform1.class) || Greenfoot.isKeyDown("Up") && isTouching(Platform1.class) || Greenfoot.isKeyDown("Space") && isTouching(Platform1.class))
         {
             gravity = 25;
         }

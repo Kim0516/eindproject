@@ -60,7 +60,7 @@ public class level1 extends World
         addObject(new Enemy1(),8523,439);
         addObject(new Enemy1(),9106,610);
         addObject(new Enemy1(),9350,269);
-        addObject(new worldSwitch(),3803,610);
+        addObject(new worldSwitch(),4003,610);
         update();
     }
     //add all the code below to level2 to add the background to level 2

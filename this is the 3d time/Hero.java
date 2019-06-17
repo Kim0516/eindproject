@@ -42,8 +42,8 @@ public class Hero extends Actor
         }
         if(isTouching(Enemy.class))
         {
-            getWorld().removeObject(this); 
-            Greenfoot.stop();
+            //getWorld().removeObject(this); 
+            //Greenfoot.stop();
         }
         if(Greenfoot.isKeyDown("k"))
         {

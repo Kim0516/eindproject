@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class level2 extends World
 {
-
     /**
      * Constructor for objects of class level2.
      * 
@@ -19,17 +18,17 @@ public class level2 extends World
         super(720, 720, 1, false);
         addObject(new Hero(),360, 610);
         //adding platforms
-        addObject(new Platform1(),500,550);
-        addObject(new Platform1(),720,500);
-        addObject(new Platform1(),950,260);
-        addObject(new Platform1(),1200,400);
-        addObject(new Platform1(),1400,234);
-        addObject(new Platform1(),1300,550);
+        addObject(new Platform1(),563,423);
+        addObject(new Platform1(),838,500);
+        addObject(new Platform1(),950,283);
+        addObject(new Platform1(),1095,100);
+        addObject(new Platform1(),1347,234);
+        addObject(new Platform1(),1732,234);
         addObject(new Platform1(),1540,470);
-        addObject(new Platform1(),2134,552);
-        addObject(new Platform1(),2268,316);
-        addObject(new Platform1(),2503,316);
-        addObject(new Platform1(),2903,556);
+        addObject(new Platform1(),1974,352);
+        addObject(new Platform1(),2343,379);
+        addObject(new Platform1(),2621,416);
+        addObject(new Platform1(),2903,512);
         addObject(new Platform1(),3103,373);
         //adding enimies
         addObject(new Enemy1(),650,610);
@@ -61,7 +60,6 @@ public class level2 extends World
         addObject(new Enemy1(),8523,439);
         addObject(new Enemy1(),9106,610);
         addObject(new Enemy1(),9350,269);
-        addObject(new worldSwitch(),3503,610);
         update();
     }
     //add all the code below to level2 to add the background to level 2

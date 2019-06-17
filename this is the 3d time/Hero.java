@@ -42,14 +42,13 @@ public class Hero extends Actor
         }
         if(isTouching(Enemy.class))
         {
-            //getWorld().removeObject(this); 
-            //Greenfoot.stop();
+            getWorld().removeObject(this); 
+            Greenfoot.stop();
         }
         if(Greenfoot.isKeyDown("k"))
         {
             Greenfoot.setWorld(new level2());
         }
-        getWorld().showText(""+score,700,10);
         Moving();
         move(-1);
         setLocation(getX(), getY() - gravity);

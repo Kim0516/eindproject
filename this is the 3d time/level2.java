@@ -17,6 +17,7 @@ public class level2 extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(720, 720, 1, false);
         addObject(new Hero(),360, 610);
+        
         //adding platforms
         addObject(new Platform1(),563,423);
         addObject(new Platform1(),838,500);
@@ -30,36 +31,42 @@ public class level2 extends World
         addObject(new Platform1(),2621,416);
         addObject(new Platform1(),2903,512);
         addObject(new Platform1(),3103,373);
-        //adding enimies
-        addObject(new Enemy1(),650,610);
-        addObject(new Enemy1(),923,610);
-        addObject(new Enemy1(),950,260);
-        addObject(new Enemy1(),1200,400);
-        addObject(new Enemy1(),1350,610);
-        addObject(new Enemy1(),1400,610);
-        addObject(new Enemy1(),6340,610);
-        addObject(new Enemy1(),4542,610);
-        addObject(new Enemy1(),3764,610);
-        addObject(new Enemy1(),3241,610);
-        addObject(new Enemy1(),5562,610);
-        addObject(new Enemy1(),5857,610);
-        addObject(new Enemy1(),1600,234);
-        addObject(new Enemy1(),6693,365);
-        addObject(new Enemy1(),2863,436);
-        addObject(new Enemy1(),2595,578);
-        addObject(new Enemy1(),7595,232);
-        addObject(new Enemy1(),3201,610);
-        addObject(new Enemy1(),2135,430);
-        addObject(new Enemy1(),3502,610);
-        addObject(new Enemy1(),2640,610);
-        addObject(new Enemy1(),7895,212);
-        addObject(new Enemy1(),7895,610);
-        addObject(new Enemy1(),4895,412);
-        addObject(new Enemy1(),3995,326);
-        addObject(new Enemy1(),5313,402);
-        addObject(new Enemy1(),8523,439);
-        addObject(new Enemy1(),9106,610);
-        addObject(new Enemy1(),9350,269);
+        
+        //adding enimies on the ground
+        addObject(new Enemy2(),650,610);
+        addObject(new Enemy2(),923,610);
+        addObject(new Enemy2(),1400,610);
+        addObject(new Enemy2(),6340,610);
+        addObject(new Enemy2(),3542,610);
+        addObject(new Enemy2(),8764,610);
+        addObject(new Enemy2(),3241,610);
+        addObject(new Enemy2(),5562,610);
+        addObject(new Enemy2(),6857,610);
+        addObject(new Enemy2(),1969,610);
+        addObject(new Enemy2(),4201,610);
+        addObject(new Enemy2(),3502,610);
+        addObject(new Enemy2(),2640,610);
+        addObject(new Enemy2(),7895,610);
+        addObject(new Enemy2(),9106,610);
+        addObject(new Enemy2(),5502,610);
+        addObject(new Enemy2(),5932,610);
+        addObject(new Enemy2(),1362,610);
+        
+        //adding other enemies
+        addObject(new Enemy2(),950,400); //1
+        addObject(new Enemy2(),1723,476);//3
+        addObject(new Enemy2(),1600,234);//2
+        addObject(new Enemy2(),6693,365);//10
+        addObject(new Enemy2(),3263,436);//6
+        addObject(new Enemy2(),2595,138);//5
+        addObject(new Enemy2(),7595,522);//11
+        addObject(new Enemy2(),2135,230);//4
+        addObject(new Enemy2(),7895,212);//12
+        addObject(new Enemy2(),4895,312);//8
+        addObject(new Enemy2(),400,262);//7
+        addObject(new Enemy2(),5313,402);//9
+        addObject(new Enemy2(),8523,439);//12
+        addObject(new Enemy2(),9350,269);//13
         update();
     }
     //add all the code below to level2 to add the background to level 2

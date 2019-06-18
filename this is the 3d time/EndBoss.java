@@ -1,14 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Enemy1 here.
+ * Write a description of class EndBoss here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Enemy1 extends Enemy
+public class EndBoss extends Enemy
 {
-    public Enemy1()
+    public EndBoss()
     {
         super(2);
         setRotation(0);
@@ -21,10 +21,15 @@ public class Enemy1 extends Enemy
     public void act() 
     {
         moveEnemy();
+        move(Greenfoot.getRandomNumber(5));
         checkHealth();
-        if (getX() == -65)
+        if(getX() > 720)
         {
-            getWorld().removeObject(this);
+            setLocation(getX()-360, getY());
+        }
+        if(getX() < 5)
+        {
+            setLocation(getX()+660, getY());
         }
     }  
 
@@ -47,4 +52,3 @@ public class Enemy1 extends Enemy
             return false;  
     }  
 }
-

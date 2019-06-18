@@ -1,18 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.lang.*;
-import java.util.*;
+
 /**
- * Write a description of class Hero here.
+ * Write a description of class StillHero here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Hero extends Actor
+public class StillHero extends Hero
 {
     private int gravity =1;
     private static int score =0;
     /**
-     * Act - do whatever the Hero wants to do. This method is called whenever
+     * Act - do whatever the StillHero wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
@@ -53,7 +52,6 @@ public class Hero extends Actor
             Greenfoot.setWorld(new end());
         }
         Moving();
-        move(-1);
         setLocation(getX(), getY() - gravity);
         Platforms();
     }    
@@ -137,6 +135,10 @@ public class Hero extends Actor
         if(Greenfoot.isKeyDown("w") && isTouching(Platform2.class) || Greenfoot.isKeyDown("Up") && isTouching(Platform2.class) || Greenfoot.isKeyDown("Space") && isTouching(Platform2.class))
         {
             gravity = 25;
+        }
+        if(isTouching(Platform2.class))
+        {
+            move(-1);
         }
     }
 }

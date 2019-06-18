@@ -21,8 +21,11 @@ public class Enemy2 extends Enemy
     public void act() 
     {
         moveEnemy();
-
         checkHealth();
+        if (getX() == -65)
+        {
+            getWorld().removeObject(this);
+        }
     }  
 
     public void checkHealth()

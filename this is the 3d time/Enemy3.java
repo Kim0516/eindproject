@@ -1,14 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Enemy1 here.
+ * Write a description of class enemy3 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Enemy1 extends Enemy
+public class Enemy3 extends Enemy
 {
-    public Enemy1()
+    public Enemy3()
     {
         super(2);
         setRotation(0);
@@ -47,4 +47,3 @@ public class Enemy1 extends Enemy
             return false;  
     }  
 }
-

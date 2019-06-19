@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Enemy extends Actor
 {
+    public static int score = 0;
     int health =0;
     public Enemy(int hp)
     {
@@ -30,9 +31,13 @@ public class Enemy extends Actor
     {
         move(-Greenfoot.getRandomNumber(7));
     }
-    public void Health()
+    public void attacked()
     {
-     loseHealth();
+        if(Greenfoot.mouseClicked(this))
+        {
+            loseHealth();
+            score = score + 100;
+        }
     }
 }
 

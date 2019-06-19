@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemy3 extends Enemy
 {
+    int health =1;
     public Enemy3()
     {
         super(2);
@@ -22,28 +23,27 @@ public class Enemy3 extends Enemy
     {
         moveEnemy();
         checkHealth();
-        if (getX() == -65)
-        {
-            getWorld().removeObject(this);
-        }
+        attacked();
     }  
 
     public void checkHealth()
     {
-        if (health <= 1)
+        if (health <= 0)
         {
             getWorld().removeObject(this);
         }
     }
-
-    public boolean atWorldEdge()
-
-    {  
-        if(getX() < 10 || getX() > getWorld().getWidth() - 10)  
-            return true;  
-        if(getY() < 10 || getY() > getWorld().getHeight() - 10)  
-            return true;  
-        else 
-            return false;  
-    }  
+    
+     public void loseHealth()
+    {
+     health--;   
+    }
+    
+    public void attacked()
+    {
+        if(Greenfoot.mouseClicked(this))
+        {
+            loseHealth();
+        }
+    }
 }

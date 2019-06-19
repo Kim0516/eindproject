@@ -10,7 +10,7 @@ import java.util.*;
 public class Hero extends Actor
 {
     private int gravity =1;
-    private static int score =0;
+    
     /**
      * Act - do whatever the Hero wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -50,7 +50,7 @@ public class Hero extends Actor
         }
         if(Greenfoot.isKeyDown("F8"))
         {
-            Greenfoot.setWorld(new end());
+            Greenfoot.setWorld(new level3());
         }
         Moving();
         move(-1);

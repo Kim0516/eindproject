@@ -49,7 +49,7 @@ public class StillHero extends Hero
         }
         if(Greenfoot.isKeyDown("F8"))
         {
-            Greenfoot.setWorld(new end());
+            Greenfoot.setWorld(new level3());
         }
         Moving();
         setLocation(getX(), getY() - gravity);

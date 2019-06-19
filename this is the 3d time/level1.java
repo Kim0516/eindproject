@@ -6,16 +6,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class level1 extends World
+public class level1 extends levels
 {
+
     /**
      * Constructor for objects of class level1.
      * 
      */
     public level1()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(720, 720, 1, false);
+    {
         addObject(new Hero(),360, 610);
         //adding platforms
         addObject(new Platform(),500,550);
@@ -80,6 +79,5 @@ public class level1 extends World
     {
         if (baseX != 0) getBackground().drawImage(bgi, baseX - bgiWidth, 0);
         if (baseX < getWidth()) getBackground().drawImage(bgi, baseX, 0);
-    } 
-
+    }
 }

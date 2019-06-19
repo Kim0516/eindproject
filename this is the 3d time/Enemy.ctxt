@@ -11,5 +11,5 @@ comment3.target=void\ loseHealth()
 comment4.params=
 comment4.target=void\ moveEnemy()
 comment5.params=
-comment5.target=void\ Health()
+comment5.target=void\ attacked()
 numComments=6

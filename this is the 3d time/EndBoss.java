@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class EndBoss extends Enemy
 {
+    int health =20;
     public EndBoss()
     {
         super(2);
@@ -23,6 +24,7 @@ public class EndBoss extends Enemy
         moveEnemy();
         move(Greenfoot.getRandomNumber(5));
         checkHealth();
+        attacked();
         if(getX() > 720)
         {
             setLocation(getX()-360, getY());
@@ -35,20 +37,9 @@ public class EndBoss extends Enemy
 
     public void checkHealth()
     {
-        if (health <= 1)
+        if (health <= 0)
         {
             getWorld().removeObject(this);
         }
     }
-
-    public boolean atWorldEdge()
-
-    {  
-        if(getX() < 10 || getX() > getWorld().getWidth() - 10)  
-            return true;  
-        if(getY() < 10 || getY() > getWorld().getHeight() - 10)  
-            return true;  
-        else 
-            return false;  
-    }  
 }

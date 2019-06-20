@@ -8,13 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class chestWorld extends levels
 {
-
     /**
      * Constructor for objects of class chestWorld.
      * 
      */
     public chestWorld()
     {
-        addObject(new Chest(),360,610);
+        addObject(new StillHero(),50,610);
+        addObject(new Chest(),650,610);
     }
 }

@@ -51,28 +51,28 @@ public class level3 extends levels
         addObject(new Enemy3(),2300,330);
         addObject(new Enemy3(),2900,430);
         addObject(new Enemy3(),3921,230);
-        
+
         addObject(new Enemy3(),4550,400);
         addObject(new Enemy3(),4900,230);
         addObject(new Enemy3(),5500,30);
         addObject(new Enemy3(),6300,330);
         addObject(new Enemy3(),6900,430);
         addObject(new Enemy3(),7921,230);
-        
+
         addObject(new Enemy3(),8550,400);
         addObject(new Enemy3(),8900,230);
         addObject(new Enemy3(),9500,30);
         addObject(new Enemy3(),10300,330);
         addObject(new Enemy3(),10900,430);
         addObject(new Enemy3(),11921,230);
-        
+
         addObject(new Enemy3(),16550,400);
         addObject(new Enemy3(),16900,230);
         addObject(new Enemy3(),17500,30);
         addObject(new Enemy3(),18300,330);
         addObject(new Enemy3(),18900,430);
         addObject(new Enemy3(),19921,230);
-        
+
         addObject(new Enemy3(),24550,400);
         addObject(new Enemy3(),24900,230);
         addObject(new Enemy3(),25500,30);

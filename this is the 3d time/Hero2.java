@@ -1,17 +1,20 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.lang.*;
+import java.util.*;
 /**
- * Write a description of class StillHero here.
+ * Write a description of class Hero here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class StillHero extends Hero
+public class Hero2 extends Actor
 {
     private int gravity =1;
+    private int timer =3100;
     private static int score =0;
+    static public int level;
     /**
-     * Act - do whatever the StillHero wants to do. This method is called whenever
+     * Act - do whatever the Hero wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
@@ -40,24 +43,23 @@ public class StillHero extends Hero
         }
         if(isTouching(Enemy.class))
         {
-            Greenfoot.setWorld(new level3());
-            Greenfoot.stop();
-        }
-        if(Greenfoot.isKeyDown("k"))
-        {
             Greenfoot.setWorld(new level2());
+            Greenfoot.stop();
         }
         if(Greenfoot.isKeyDown("F8"))
         {
             Greenfoot.setWorld(new level3());
         }
-        if(isTouching(Chest.class))
+        if(Greenfoot.isKeyDown("k"))
         {
-            
+            Greenfoot.setWorld(new level2());
         }
+        getWorld().showText(""+score,700,10);
         Moving();
+        move(-1);
         setLocation(getX(), getY() - gravity);
         Platforms();
+        kill();
     }    
 
     /**
@@ -96,7 +98,7 @@ public class StillHero extends Hero
         {
             gravity = 1;
         }
-        if(Greenfoot.isKeyDown("w") && isTouching(Platform.class) || Greenfoot.isKeyDown("Up") && isTouching(Platform.class) || Greenfoot.isKeyDown("Space") && isTouching(Platform.class))
+        if(Greenfoot.isKeyDown("w") && isTouching(Platform1.class) || Greenfoot.isKeyDown("Up") && isTouching(Platform.class) || Greenfoot.isKeyDown("Space") && isTouching(Platform.class))
         {
             gravity = 25;
         }
@@ -120,29 +122,15 @@ public class StillHero extends Hero
         {
             gravity = 25;
         }
-        if(isTouching(Platform2.class) && getY() < 465)
-        {
-            gravity--;
-        }
-        if(isTouching(Platform2.class) && getY() > 470)
-        {
-            gravity = 1;
-        }
-        if(isTouching(Platform2.class) && getY() > 650)
-        {
-            gravity--;
-        }
-        if(isTouching(Platform2.class) && getY() < 655)
-        {
-            gravity = 1;
-        }
-        if(Greenfoot.isKeyDown("w") && isTouching(Platform2.class) || Greenfoot.isKeyDown("Up") && isTouching(Platform2.class) || Greenfoot.isKeyDown("Space") && isTouching(Platform2.class))
-        {
-            gravity = 25;
-        }
-        if(isTouching(Platform2.class))
-        {
-            move(-1);
-        }
+        
+
     }
+    
+    public void kill()
+    {
+        if (isTouching (Enemy1.class)){
+        Greenfoot.setWorld(new level2());
+    }
+}
+
 }

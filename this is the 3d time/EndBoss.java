@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class EndBoss extends Enemy
 {
-    int health =20;
+    int health =2;
     public EndBoss()
     {
         super(2);
@@ -40,6 +40,12 @@ public class EndBoss extends Enemy
         if (health <= 0)
         {
             getWorld().removeObject(this);
+            Greenfoot.setWorld(new chestWorld());
         }
+    }
+    
+      public void loseHealth()
+    {
+     health--;   
     }
 }

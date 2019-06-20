@@ -15,7 +15,7 @@ public class level2 extends levels
      */
     public level2()
     {
-        addObject(new Hero(),360, 610);
+        addObject(new Hero2(),360, 610);
         
         //adding platforms
         addObject(new Platform1(),563,423);

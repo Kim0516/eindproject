@@ -38,13 +38,5 @@ public class Enemy1 extends Enemy
     {
      health--;   
     }
-    
-    public void attacked()
-    {
-        if(Greenfoot.mouseClicked(this))
-        {
-            loseHealth();
-        }
-    }
 }
 

@@ -10,6 +10,4 @@ comment3.params=
 comment3.target=void\ checkHealth()
 comment4.params=
 comment4.target=void\ loseHealth()
-comment5.params=
-comment5.target=void\ attacked()
-numComments=6
+numComments=5

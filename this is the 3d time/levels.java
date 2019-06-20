@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class levels extends World
 {
-    public static int score = 0;
+    score score = new score();
     /**
      * Constructor for objects of class levels.
      * 
@@ -17,10 +17,11 @@ public class levels extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(720, 720, 1, false); 
-        if(Greenfoot.mouseClicked(Enemy1.class))
-        {
+        addObject(score,650,10);
+    }
 
-        }
-        showText(""+score,700,10);
+    public score getScore()
+    {
+        return score;
     }
 }

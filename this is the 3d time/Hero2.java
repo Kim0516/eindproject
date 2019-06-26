@@ -46,17 +46,13 @@ public class Hero2 extends Actor
             Greenfoot.setWorld(new level2());
             Greenfoot.stop();
         }
-        if(Greenfoot.isKeyDown("F8"))
+        if(Greenfoot.isKeyDown("f8"))
         {
-            World myWorld = getWorld();
-            levels levels = (levels)myWorld;
-            score score = levels.getScore();
-            score.bigAdd();
-            Greenfoot.setWorld(new level3());
-        }
-        if(Greenfoot.isKeyDown("k"))
-        {
-            Greenfoot.setWorld(new level2());
+                World myWorld = getWorld();
+                levels levels = (levels)myWorld;
+                score score = levels.getScore();
+                score.bigAdd();
+                Greenfoot.setWorld(new level3());
         }
         getWorld().showText(""+score,700,10);
         Moving();
@@ -126,15 +122,13 @@ public class Hero2 extends Actor
         {
             gravity = 25;
         }
-        
 
     }
-    
     public void kill()
     {
         if (isTouching (Enemy1.class)){
-        Greenfoot.setWorld(new level2());
+            Greenfoot.setWorld(new level2());
+        }
     }
-}
 
 }

@@ -53,7 +53,27 @@ public class StillHero extends Hero
         }
         if(isTouching(Chest.class))
         {
-            Greenfoot.stop();
+            Greenfoot.setWorld(new hint());
+        }
+        if(isTouching(Platform2.class) && getY() < 465)
+        {
+            gravity--;
+        }
+        if(isTouching(Platform2.class) && getY() > 470)
+        {
+            gravity = 1;
+        }
+        if(isTouching(Platform2.class) && getY() > 650)
+        {
+            gravity--;
+        }
+        if(isTouching(Platform2.class) && getY() < 655)
+        {
+            gravity = 1;
+        }
+        if(Greenfoot.isKeyDown("w") && isTouching(Platform2.class) || Greenfoot.isKeyDown("Up") && isTouching(Platform2.class) || Greenfoot.isKeyDown("Space") && isTouching(Platform2.class))
+        {
+            gravity = 25;
         }
         Moving();
         setLocation(getX(), getY() - gravity);

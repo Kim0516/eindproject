@@ -45,12 +45,12 @@ public class Hero extends Actor
             Greenfoot.stop();
         }
         if(Greenfoot.isKeyDown("k"))
-        {
-            World myWorld = getWorld();
-            levels levels = (levels)myWorld;
-            score score = levels.getScore();
-            score.bigAdd();
-            Greenfoot.setWorld(new level2());
+        {      
+                World myWorld = getWorld();
+                levels levels = (levels)myWorld;
+                score score = levels.getScore();
+                score.bigAdd();
+                Greenfoot.setWorld(new level2());
         }
         Moving();
         move(-1);
